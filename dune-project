@@ -1,4 +1,4 @@
-(lang dune 1.11)
+(lang dune 3.2)
 (name camomile)
 
 (generate_opam_files true)
