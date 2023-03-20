@@ -67,7 +67,7 @@ the source.
 
 ### Individual modules.
 
-See `camomile.mli` file.
+See `camomile.ml` file.
 
 ## Development
 
