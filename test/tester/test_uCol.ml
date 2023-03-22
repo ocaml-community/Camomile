@@ -49,7 +49,8 @@ let uca ~desc variable c =
   try
     while true do
       let line = input_line c in
-      if Str.string_match comment_pat line 0 then ()
+      if line = "" then ()
+      else if Str.string_match comment_pat line 0 then ()
       else (
         let t = parse_line line in
         let t_key = Ucomp.sort_key ~variable t in
