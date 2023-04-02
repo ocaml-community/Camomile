@@ -1,0 +1,1 @@
+module InstallConfig = CamomileDefaultConfig__InstallConfig
