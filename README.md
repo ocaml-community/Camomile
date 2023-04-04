@@ -76,7 +76,7 @@ See https://github.com/savonet/Camomile
 Camomile is currently maintained by Romain Beauxis <romain.beauxis@gmail.com>
 and was forked over from the original project with permission from @yoriyuki
 
-However, the project is still in needs of active contributors. Please file pull
+However, the project is still in need of active contributors. Please file pull
 requests and more!
 
 ## Acknowledgment
