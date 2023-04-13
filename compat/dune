@@ -5,6 +5,5 @@
 
 (library
  (name camomileCompat)
- (public_name camomile-compat)
  (libraries camomile camomile.lib)
  (wrapped false))
