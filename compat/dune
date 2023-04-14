@@ -1,0 +1,9 @@
+(env
+ (dev
+  (flags
+   (:standard -w -3))))
+
+(library
+ (name camomileCompat)
+ (libraries camomile camomile.lib)
+ (wrapped false))

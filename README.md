@@ -45,6 +45,21 @@ Please note that `dune install` installs the file under the same local directory
 This option is meant to be used when packaging the library for distributions using binary packages such
 as debian or ubuntu packages, RPM package etc.
 
+## Migration form 1.x.x
+
+The library's API was update and cleaned up in its version `2.0.0` as part of the migration to support OCaml `5.0.0`. As a 
+consequence, modules depending on the old library are now incompatible with the new library.
+
+If you were previously using the `CamomileLibraryDefault` module, all you should have to do is
+use the new top-level `Camomile` module.
+
+If you were previously using the configuration functor to define your own library, you should be able to
+use the new `Camomile.Make` functor available at top-level as well.
+
+Otherwise, you can check the `compat/` directory of this repository. It contains a simple compatibility
+library that you should be able to re-use in your code. We do, however, recommend simply updating your 
+code to the new API. It really shouldn't be too hard!
+
 ## Using libraries
 
 ### Configuration
