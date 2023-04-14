@@ -45,7 +45,7 @@ Please note that `dune install` installs the file under the same local directory
 This option is meant to be used when packaging the library for distributions using binary packages such
 as debian or ubuntu packages, RPM package etc.
 
-## Migration form 1.x.x
+## Migrating form 1.x.x
 
 The library's API was update and cleaned up in its version `2.0.0` as part of the migration to support OCaml `5.0.0`. As a 
 consequence, modules depending on the old library are now incompatible with the new library.
