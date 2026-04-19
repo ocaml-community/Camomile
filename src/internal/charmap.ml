@@ -57,6 +57,8 @@ module type Interface = sig
 end
 
 module Configure (Config : Config.Type) = struct
+  module Database = Database.Make (Config)
+
   type enc_to_ucs = {
     enc_to_ucs_no_char : int;
     enc_to_ucs_tbl : Byte_labeled_dag.bytes;
@@ -97,7 +99,7 @@ module Configure (Config : Config.Type) = struct
     with Not_found ->
       let rec look count name =
         let data : data =
-          Database.read Config.charmapdir "mar" input_value name
+          Database.read Config.charmapdir "mar" (fun v -> v) name
         in
         match data with
           | Alias s -> if count = 1 then raise Not_found else look 1 s

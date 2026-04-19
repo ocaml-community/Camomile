@@ -49,7 +49,7 @@ type t = string
     tries fr.[suffix]. If fr.[suffix] is also not found, then the file
     [root].[suffix] is tried. Still the data is not found, then [Not_found] is
     raised. *)
-val read : string -> string -> (in_channel -> 'a) -> string -> 'a
+val read : string -> string -> ('a -> 'b) -> string -> 'b
 
 (** [contain loc1 loc2] : If [loc1] is contained in [loc2] then true otherwise
     false. For example, "fr" is contained in "fr_CA" while "en_CA" does not

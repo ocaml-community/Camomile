@@ -34,5 +34,8 @@ jobs:
       - name: Install camomile
         run: opam install -y --with-test camomile
 
+      - name: Install camomile-embedded
+        run: opam install -y --with-test camomile-embedded
+
       - name: Build with env config
         run: CAMOMILE_CONFIG=env CAMOMILE_PREFIX=/usr opam exec -- dune build -p camomile

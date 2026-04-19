@@ -39,7 +39,19 @@
     The [key] specifies key associated the value. Any characters can be used in
     [key], since they are properly escaped. If there are no data associated to
     [key], raise Not_found. *)
-val read : string -> string -> (in_channel -> 'a) -> string -> 'a
+val escape : string -> string
+
+module type FileReader = sig
+  val get : string -> 'a
+end
+
+module Make (_ : FileReader) : sig
+  val read : string -> string -> ('a -> 'b) -> string -> 'b
+end
+
+module Filesystem : FileReader
+
+val read : string -> string -> ('a -> 'b) -> string -> 'b
 
 (** [writer dir suffix writer key data] write [data] associated the [key] into
     the directory [dir] with [suffix]. You can use any characters in [key] since

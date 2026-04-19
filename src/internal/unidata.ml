@@ -189,9 +189,11 @@ module type Type = sig
 end
 
 module Make (Config : Config.Type) = struct
+  module Database = Database.Make (Config)
+
   let read_data ?datadir name =
     let datadir = match datadir with Some d -> d | None -> Config.datadir in
-    Database.read datadir "mar" input_value name
+    Database.read datadir "mar" (fun v -> v) name
 
   type general_category_type =
     [ `Lu (* Letter, Uppercase *)
@@ -580,9 +582,9 @@ module Make (Config : Config.Type) = struct
 
   type localedata = { col_info : col_info option }
 
-  let read_localedata c =
-    let data : localedata = input_value c in
-    match data.col_info with None -> raise Not_found | Some x -> x
+  let read_localedata = function
+    | { col_info = Some x } -> x
+    | _ -> raise Not_found
 
   let col_tbl = Hashtbl.create 0
 

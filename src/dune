@@ -19,13 +19,23 @@
  (action
   (write-file
    %{target}
-   "\nlet prefix = \"%{env:CAMOMILE_PREFIX=/usr}/share/camomile\"\nlet datadir = Filename.concat prefix \"database\"\nlet localedir = Filename.concat prefix \"locales\"\nlet charmapdir = Filename.concat prefix \"charmaps\"\nlet unimapdir = Filename.concat prefix \"mappings\"\n")))
+   "\nlet prefix = \"%{env:CAMOMILE_PREFIX=/usr}/share/camomile\"\nlet datadir = Filename.concat prefix \"database\"\nlet localedir = Filename.concat prefix \"locales\"\nlet charmapdir = Filename.concat prefix \"charmaps\"\nlet unimapdir = Filename.concat prefix \"mappings\"\nlet get = CamomileLib.Database.Filesystem.get\n")))
+
+(rule
+ (target camomile_embedded_data.ml)
+ (deps
+  (glob_files database/*.mar)
+  (glob_files charmaps/*.mar)
+  (glob_files locales/*.mar)
+  (glob_files mappings/*.mar))
+ (action
+  (run %{bin:ocaml-crunch} -m plain -e mar -o %{target} .)))
 
 (library
  (name camomileLib)
  (public_name camomile.lib)
  (libraries bigarray camlp-streams)
- (modules :standard \ camomile configImpl sites))
+ (modules :standard \ camomile camomile_embedded_data configImpl sites))
 
 (library
  (name camomile)

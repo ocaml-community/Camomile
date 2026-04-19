@@ -1,0 +1,9 @@
+(executable
+ (name test_embedded)
+ (libraries camomile-embedded))
+
+(rule
+ (alias runtest)
+ (package camomile-embedded)
+ (action
+  (run ./test_embedded.exe)))
