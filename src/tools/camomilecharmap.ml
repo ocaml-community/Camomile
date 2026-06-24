@@ -46,7 +46,7 @@ let parse_arg () =
   Arg.parse
     [("-d", Arg.String (( := ) dir), "[directory]\toutputpath")]
     (fun s ->
-      if !file <> None then failwith "Too many arguments" else file := Some s)
+      if !file <> None then failwith "Too many arguments" else file := Some (Filename.basename s))
     helptext;
   (!file, !dir)
 
