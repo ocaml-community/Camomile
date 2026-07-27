@@ -5,7 +5,9 @@ synopsis: "Camomile Unicode library with data files embedded at compile time"
 description: """
 camomile-embedded provides the same API as camomile but with all Unicode
 data files embedded directly into the library. Programs using this package
-have no runtime filesystem dependency on data files."""
+have no runtime filesystem dependency on data files. The
+camomile-embedded.charencoding sublibrary exposes charset conversion alone
+and embeds only the charmap data it needs."""
 maintainer: ["romain.beauxis@gmail.com"]
 authors: ["Yoriyuki Yamagata"]
 license: "LGPL-2.0-or-later WITH OCaml-LGPL-linking-exception"

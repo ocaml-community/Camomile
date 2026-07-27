@@ -21,6 +21,10 @@
    %{target}
    "\nlet prefix = \"%{env:CAMOMILE_PREFIX=/usr}/share/camomile\"\nlet datadir = Filename.concat prefix \"database\"\nlet localedir = Filename.concat prefix \"locales\"\nlet charmapdir = Filename.concat prefix \"charmaps\"\nlet unimapdir = Filename.concat prefix \"mappings\"\nlet get = CamomileLib.Database.Filesystem.get\n")))
 
+; -b 0 emits one string literal per file instead of 4096-byte chunks: read
+; returns the literal itself and the data stays demand-paged from the
+; executable, rather than being faulted in wholesale by the GC's root scan.
+
 (rule
  (target camomile_embedded_data.ml)
  (deps
@@ -29,13 +33,35 @@
   (glob_files locales/*.mar)
   (glob_files mappings/*.mar))
  (action
-  (run %{bin:ocaml-crunch} -m plain -e mar -o %{target} .)))
+  (run %{bin:ocaml-crunch} -m plain -b 0 -e mar -o %{target} .)))
+
+(rule
+ (target camomile_embedded_charmaps_data.ml)
+ (deps
+  (glob_files charmaps/*.mar))
+ (action
+  (run %{bin:ocaml-crunch} -m plain -b 0 -e mar -o %{target} charmaps)))
+
+(rule
+ (target camomile_embedded_unimaps_data.ml)
+ (deps
+  (glob_files mappings/*.mar))
+ (action
+  (run %{bin:ocaml-crunch} -m plain -b 0 -e mar -o %{target} mappings)))
 
 (library
  (name camomileLib)
  (public_name camomile.lib)
  (libraries bigarray camlp-streams)
- (modules :standard \ camomile camomile_embedded_data configImpl sites))
+ (modules
+  :standard
+  \
+  camomile
+  camomile_embedded_data
+  camomile_embedded_charmaps_data
+  camomile_embedded_unimaps_data
+  configImpl
+  sites))
 
 (library
  (name camomile)

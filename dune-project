@@ -33,7 +33,9 @@ designed for Unicode Standard 3.2.")
  (description "\
 camomile-embedded provides the same API as camomile but with all Unicode
 data files embedded directly into the library. Programs using this package
-have no runtime filesystem dependency on data files.")
+have no runtime filesystem dependency on data files. The
+camomile-embedded.charencoding sublibrary exposes charset conversion alone
+and embeds only the charmap data it needs.")
  (depends
   (camomile (= :version))
   (crunch :build)
