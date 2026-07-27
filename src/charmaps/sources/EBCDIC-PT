@@ -1,3 +1,9 @@
+<code_set_name> EBCDIC-PT
+<comment_char> %
+<escape_char> /
+% version: 1.0
+
+CHARMAP
 <U0000>     /x00         NULL (NUL)
 <U0001>     /x01         START OF HEADING (SOH)
 <U0002>     /x02         START OF TEXT (STX)
