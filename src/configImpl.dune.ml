@@ -3,3 +3,4 @@ let datadir = get_path Sites.Sites.database
 let localedir = get_path Sites.Sites.locales
 let charmapdir = get_path Sites.Sites.charmaps
 let unimapdir = get_path Sites.Sites.mappings
+let get = CamomileLib.Database.Filesystem.get

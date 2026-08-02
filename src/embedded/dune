@@ -1,0 +1,14 @@
+(include_subdirs no)
+
+(rule
+ (target embedded_data.ml)
+ (deps ../camomile_embedded_data.ml)
+ (action
+  (copy %{deps} %{target})))
+
+(library
+ (name camomile_embedded)
+ (public_name camomile-embedded)
+ (wrapped false)
+ (libraries camomile.lib camomile)
+ (modules embedded_data camomile_embedded))

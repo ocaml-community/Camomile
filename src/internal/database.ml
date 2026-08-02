@@ -43,13 +43,27 @@ let escape s =
   done;
   Buffer.contents b
 
-let read dir suffix reader key =
-  let fname = escape key in
-  let path = Filename.concat dir (fname ^ "." ^ suffix) in
-  let c = try open_in_bin path with Sys_error _ -> raise Not_found in
-  let v = reader c in
-  close_in c;
-  v
+module type FileReader = sig
+  val get : string -> 'a
+end
+
+module Make (R : FileReader) = struct
+  let read dir suffix reader key =
+    let fname = escape key in
+    let path = Filename.concat dir (fname ^ "." ^ suffix) in
+    let v = R.get path in
+    reader v
+end
+
+module Filesystem = struct
+  let get path =
+    let c = try open_in_bin path with Sys_error _ -> raise Not_found in
+    let v = input_value c in
+    close_in c;
+    v
+end
+
+include Make (Filesystem)
 
 let write dir suffix writer key data =
   let fname = escape key in

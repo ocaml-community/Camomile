@@ -26,3 +26,17 @@ designed for Unicode Standard 3.2.")
   (stdlib-random :with-test)
   (ocaml (>= 4.13)))
   (sites (share database) (share mappings) (share charmaps) (share locales)))
+
+(package
+ (name camomile-embedded)
+ (synopsis "Camomile Unicode library with data files embedded at compile time")
+ (description "\
+camomile-embedded provides the same API as camomile but with all Unicode
+data files embedded directly into the library. Programs using this package
+have no runtime filesystem dependency on data files. The
+camomile-embedded.charencoding sublibrary exposes charset conversion alone
+and embeds only the charmap data it needs.")
+ (depends
+  (camomile (= :version))
+  (crunch :build)
+  (ocaml (>= 4.13))))

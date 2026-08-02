@@ -1,0 +1,19 @@
+(include_subdirs no)
+
+(rule
+ (target charmaps_data.ml)
+ (deps ../../camomile_embedded_charmaps_data.ml)
+ (action
+  (copy %{deps} %{target})))
+
+(rule
+ (target unimaps_data.ml)
+ (deps ../../camomile_embedded_unimaps_data.ml)
+ (action
+  (copy %{deps} %{target})))
+
+(library
+ (name camomile_embedded_charencoding)
+ (public_name camomile-embedded.charencoding)
+ (libraries camomile.lib)
+ (modules charmaps_data unimaps_data camomile_embedded_charencoding))

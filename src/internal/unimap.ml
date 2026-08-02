@@ -58,6 +58,8 @@ module type Type = sig
 end
 
 module Make (Config : Config.Type) : Type = struct
+  module Database = Database.Make (Config)
+
   type mapping = { no_char : int; tbl : Tbl31.Bytes.t }
 
   let read_map map i = Tbl31.Bytes.get map.tbl i
@@ -108,7 +110,7 @@ module Make (Config : Config.Type) : Type = struct
             raise Not_found
         | Some x -> x
     with Not_found ->
-      let map = Database.read Config.unimapdir "mar" input_value name in
+      let map = Database.read Config.unimapdir "mar" (fun v -> v) name in
       let b = Weak.create 1 in
       Weak.set b 0 (Some map);
       Hashtbl.add loaded name b;

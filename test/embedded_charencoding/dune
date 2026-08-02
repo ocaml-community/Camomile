@@ -1,0 +1,9 @@
+(executable
+ (name test_embedded_charencoding)
+ (libraries camomile-embedded.charencoding camomile.lib))
+
+(rule
+ (alias runtest)
+ (package camomile-embedded)
+ (action
+  (run ./test_embedded_charencoding.exe)))
