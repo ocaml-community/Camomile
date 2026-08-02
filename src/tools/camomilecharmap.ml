@@ -46,7 +46,7 @@ let parse_arg () =
   Arg.parse
     [("-d", Arg.String (( := ) dir), "[directory]\toutputpath")]
     (fun s ->
-      if !file <> None then failwith "Too many arguments" else file := Some (Filename.basename s))
+      if !file <> None then failwith "Too many arguments" else file := Some s)
     helptext;
   (!file, !dir)
 
@@ -77,7 +77,9 @@ let begin_with s s' =
     with Break -> false)
 
 let parse_header file inchan =
-  let codeset_name = ref file in
+  (* Charmaps without a <code_set_name> header are named after the input file.
+     Dune passes it as a path, so strip the directory. *)
+  let codeset_name = ref (Option.map Filename.basename file) in
   let aliases = ref [] in
   let unread_line = ref None in
   try

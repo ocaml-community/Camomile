@@ -1,3 +1,9 @@
+unreleased
+----------
+
+- Fix charmap generation with dune 3.24, which expands `%{deps}` to a path
+  with a directory component (#13).
+
 2.0.0 (2023-03-20)
 ------------------
 
