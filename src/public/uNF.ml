@@ -215,7 +215,10 @@ module Make (Config : Config.Type) (Text : UnicodeString.Type) = struct
       let u = XString.get x j in
       let c = UInfo.combined_class u in
       let b =
-        if j = i || c' <> c then (
+        (* UAX #15 D115: an intervening character blocks composition when its
+           combining class is >= the candidate's. That includes a starter
+           (class 0) following a non-starter. *)
+        if j = i || c' < c then (
           (*not blocked!*)
             match look_composition u (composition (XString.get x' k)) with
             | None -> true

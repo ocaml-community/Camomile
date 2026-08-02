@@ -1,0 +1,32 @@
+; Refresh the vendored Unicode data:
+;   CAMOMILE_UPDATE_UNICODE=1 dune build @update-unicode --auto-promote
+;
+; Without the variable each file is merely copied, so a plain `dune build` --
+; which builds every target in the tree -- never reaches the network.
+
+(rule
+ (targets allkeys.txt.new)
+ (enabled_if
+  (= %{env:CAMOMILE_UPDATE_UNICODE=} ""))
+ (action
+  (progn
+   (copy allkeys.txt allkeys.txt.new))))
+
+(rule
+ (targets allkeys.txt.new)
+ (enabled_if
+  (<> %{env:CAMOMILE_UPDATE_UNICODE=} ""))
+ (action
+  (run
+   curl
+   -sSfL
+   https://www.unicode.org/Public/UCA/latest/allkeys.txt
+   -o
+   allkeys.txt.new)))
+
+(rule
+ (alias update-unicode)
+ (enabled_if
+  (<> %{env:CAMOMILE_UPDATE_UNICODE=} ""))
+ (action
+  (cmp allkeys.txt allkeys.txt.new)))

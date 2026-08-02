@@ -35,7 +35,7 @@
 (* You can contact the authour by sending email to *)
 (* yoriyuki.y@gmail.com *)
 
-open Camomile
+open CamomileLib
 
 (* remove comments *)
 let range_pat =
@@ -47,8 +47,9 @@ let num_pat =
   Str.regexp "\\([0-9A-Za-z]+\\)+[ \\t]*;[ \\t]*\\([0-9]+\\)\\.\\([0-9]+\\)"
 
 let char_of_string s = UChar.chr_of_uint (int_of_string ("0x" ^ s))
-let undefined_version = '\xFE'
-let make_version_char major minor = Char.chr ((major * 16) + minor)
+
+let make_version_char major minor =
+  Version_type.char_of_major_minor (major, minor)
 
 let parse_line map s =
   if Str.string_match range_pat s 0 then (
@@ -82,6 +83,6 @@ let () =
   match Sys.argv with
     | [| _; dir; input_fname |] ->
         let map = parse (open_in input_fname) in
-        Camomile.Private.Database.write dir "mar" output_value "age"
-          (UCharTbl.Char.of_map undefined_version map)
+        Database.write dir "mar" output_value "age"
+          (UCharTbl.Char.of_map Version_type.undefined map)
     | _ -> failwith "invalid command line"

@@ -1,0 +1,13 @@
+; `dune build` builds every declared target in the tree, so the download in
+; src/unidata and test/unidata has to be gated on a variable -- otherwise no
+; one could build Camomile offline. Say so rather than passing silently.
+
+(rule
+ (alias update-unicode)
+ (enabled_if
+  (= %{env:CAMOMILE_UPDATE_UNICODE=} ""))
+ (action
+  (progn
+   (echo
+    "update-unicode: nothing checked. Re-run with CAMOMILE_UPDATE_UNICODE=1 to compare against unicode.org, and add --auto-promote to update in place.\n")
+   (run false))))

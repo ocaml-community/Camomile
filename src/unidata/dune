@@ -1,0 +1,125 @@
+; Refresh the vendored Unicode data:
+;   CAMOMILE_UPDATE_UNICODE=1 dune build @update-unicode --auto-promote
+;
+; Without the variable each file is merely copied, so a plain `dune build` --
+; which builds every target in the tree -- never reaches the network.
+
+(rule
+ (targets
+  CaseFolding.txt.new
+  CompositionExclusions.txt.new
+  DerivedAge.txt.new
+  DerivedCoreProperties.txt.new
+  PropList.txt.new
+  Scripts.txt.new
+  SpecialCasing.txt.new
+  UnicodeData.txt.new)
+ (enabled_if
+  (= %{env:CAMOMILE_UPDATE_UNICODE=} ""))
+ (action
+  (progn
+   (copy CaseFolding.txt CaseFolding.txt.new)
+   (copy CompositionExclusions.txt CompositionExclusions.txt.new)
+   (copy DerivedAge.txt DerivedAge.txt.new)
+   (copy DerivedCoreProperties.txt DerivedCoreProperties.txt.new)
+   (copy PropList.txt PropList.txt.new)
+   (copy Scripts.txt Scripts.txt.new)
+   (copy SpecialCasing.txt SpecialCasing.txt.new)
+   (copy UnicodeData.txt UnicodeData.txt.new))))
+
+(rule
+ (targets
+  CaseFolding.txt.new
+  CompositionExclusions.txt.new
+  DerivedAge.txt.new
+  DerivedCoreProperties.txt.new
+  PropList.txt.new
+  Scripts.txt.new
+  SpecialCasing.txt.new
+  UnicodeData.txt.new)
+ (enabled_if
+  (<> %{env:CAMOMILE_UPDATE_UNICODE=} ""))
+ (action
+  (run
+   curl
+   -sSfL
+   https://www.unicode.org/Public/UCD/latest/ucd/CaseFolding.txt
+   -o
+   CaseFolding.txt.new
+   https://www.unicode.org/Public/UCD/latest/ucd/CompositionExclusions.txt
+   -o
+   CompositionExclusions.txt.new
+   https://www.unicode.org/Public/UCD/latest/ucd/DerivedAge.txt
+   -o
+   DerivedAge.txt.new
+   https://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt
+   -o
+   DerivedCoreProperties.txt.new
+   https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt
+   -o
+   PropList.txt.new
+   https://www.unicode.org/Public/UCD/latest/ucd/Scripts.txt
+   -o
+   Scripts.txt.new
+   https://www.unicode.org/Public/UCD/latest/ucd/SpecialCasing.txt
+   -o
+   SpecialCasing.txt.new
+   https://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
+   -o
+   UnicodeData.txt.new)))
+
+(rule
+ (alias update-unicode)
+ (enabled_if
+  (<> %{env:CAMOMILE_UPDATE_UNICODE=} ""))
+ (action
+  (cmp CaseFolding.txt CaseFolding.txt.new)))
+
+(rule
+ (alias update-unicode)
+ (enabled_if
+  (<> %{env:CAMOMILE_UPDATE_UNICODE=} ""))
+ (action
+  (cmp CompositionExclusions.txt CompositionExclusions.txt.new)))
+
+(rule
+ (alias update-unicode)
+ (enabled_if
+  (<> %{env:CAMOMILE_UPDATE_UNICODE=} ""))
+ (action
+  (cmp DerivedAge.txt DerivedAge.txt.new)))
+
+(rule
+ (alias update-unicode)
+ (enabled_if
+  (<> %{env:CAMOMILE_UPDATE_UNICODE=} ""))
+ (action
+  (cmp DerivedCoreProperties.txt DerivedCoreProperties.txt.new)))
+
+(rule
+ (alias update-unicode)
+ (enabled_if
+  (<> %{env:CAMOMILE_UPDATE_UNICODE=} ""))
+ (action
+  (cmp PropList.txt PropList.txt.new)))
+
+(rule
+ (alias update-unicode)
+ (enabled_if
+  (<> %{env:CAMOMILE_UPDATE_UNICODE=} ""))
+ (action
+  (cmp Scripts.txt Scripts.txt.new)))
+
+(rule
+ (alias update-unicode)
+ (enabled_if
+  (<> %{env:CAMOMILE_UPDATE_UNICODE=} ""))
+ (action
+  (cmp SpecialCasing.txt SpecialCasing.txt.new)))
+
+(rule
+ (alias update-unicode)
+ (enabled_if
+  (<> %{env:CAMOMILE_UPDATE_UNICODE=} ""))
+ (action
+  (cmp UnicodeData.txt UnicodeData.txt.new)))

@@ -112,58 +112,12 @@ module type Type = sig
   val load_property_set : character_property_type -> USet.t
   val load_property_set_by_name : string -> USet.t
 
-  type script_type =
-    [ `Common
-    | `Inherited
-    | `Latin
-    | `Greek
-    | `Cyrillic
-    | `Armenian
-    | `Hebrew
-    | `Arabic
-    | `Syriac
-    | `Thaana
-    | `Devanagari
-    | `Bengali
-    | `Gurmukhi
-    | `Gujarati
-    | `Oriya
-    | `Tamil
-    | `Telugu
-    | `Kannada
-    | `Malayalam
-    | `Sinhala
-    | `Thai
-    | `Lao
-    | `Tibetan
-    | `Myanmar
-    | `Georgian
-    | `Hangul
-    | `Ethiopic
-    | `Cherokee
-    | `Canadian_Aboriginal
-    | `Ogham
-    | `Runic
-    | `Khmer
-    | `Mongolian
-    | `Hiragana
-    | `Katakana
-    | `Bopomofo
-    | `Han
-    | `Yi
-    | `Old_Italic
-    | `Gothic
-    | `Deseret
-    | `Tagalog
-    | `Hanunoo
-    | `Buhid
-    | `Tagbanwa ]
+  type script_type = Script_type.t
 
   val script : UChar.t -> script_type
   val load_script_map : unit -> script_type UMap.t
 
-  type version_type =
-    [ `Nc | `v1_0 | `v1_1 | `v2_0 | `v2_1 | `v3_0 | `v3_1 | `v3_2 ]
+  type version_type = Version_type.t
 
   val age : UChar.t -> version_type
   val older : version_type -> version_type -> bool
@@ -404,32 +358,10 @@ module Make (Config : Config.Type) : Type = struct
   let script u = script_of_num (UCharTbl.Bits.get (Lazy.force script_tbl) u)
   let load_script_map () = read_data "scripts_map"
 
-  type version_type =
-    [ `Nc | `v1_0 | `v1_1 | `v2_0 | `v2_1 | `v3_0 | `v3_1 | `v3_2 ]
+  type version_type = Version_type.t
 
-  let version_of_char = function
-    | '\x10' -> `v1_0
-    | '\x11' -> `v1_1
-    | '\x20' -> `v2_0
-    | '\x21' -> `v2_1
-    | '\x30' -> `v3_0
-    | '\x31' -> `v3_1
-    | '\x32' -> `v3_2
-    | '\xfe' -> `Nc
-    | i ->
-        failwith
-          (Printf.sprintf "version_of_char, unknown version v%x" (Char.code i))
-
-  let version_to_char = function
-    | `v1_0 -> '\x10'
-    | `v1_1 -> '\x11'
-    | `v2_0 -> '\x20'
-    | `v2_1 -> '\x21'
-    | `v3_0 -> '\x30'
-    | `v3_1 -> '\x31'
-    | `v3_2 -> '\x32'
-    | `Nc -> '\xfe'
-
+  let version_of_char = Version_type.version_of_char
+  let version_to_char = Version_type.char_of_version
   let age_tbl : UCharTbl.Char.t Lazy.t = lazy (read_data "age")
   let age u = version_of_char (UCharTbl.Char.get (Lazy.force age_tbl) u)
   let older v1 v2 = version_to_char v1 <= version_to_char v2
