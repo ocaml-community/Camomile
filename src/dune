@@ -16,10 +16,13 @@
 
 (rule
  (target configImpl.env.ml)
+ (deps configImpl.env.ml.in)
  (action
-  (write-file
+  (with-stdout-to
    %{target}
-   "\nlet prefix = \"%{env:CAMOMILE_PREFIX=/usr}/share/camomile\"\nlet datadir = Filename.concat prefix \"database\"\nlet localedir = Filename.concat prefix \"locales\"\nlet charmapdir = Filename.concat prefix \"charmaps\"\nlet unimapdir = Filename.concat prefix \"mappings\"\nlet get = CamomileLib.Database.Filesystem.get\n")))
+   (progn
+    (echo "let prefix = \"%{env:CAMOMILE_PREFIX=/usr}/share/camomile\"\n")
+    (cat configImpl.env.ml.in)))))
 
 ; -b 0 emits one string literal per file instead of 4096-byte chunks: read
 ; returns the literal itself and the data stays demand-paged from the
