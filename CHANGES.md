@@ -1,8 +1,10 @@
-unreleased
-----------
+2.1.0 (unreleased)
+------------------
 
 - Fix charmap generation with dune 3.24, which expands `%{deps}` to a path
   with a directory component (#13).
+- Add embedded APIs to be able to build binaries with the shared data built-in
+  (#12)
 
 2.0.0 (2023-03-20)
 ------------------
