@@ -24,6 +24,22 @@
     (echo "let prefix = \"%{env:CAMOMILE_PREFIX=/usr}/share/camomile\"\n")
     (cat configImpl.env.ml.in)))))
 
+(rule
+ (target script_type.ml)
+ (deps tools/gen_unidata.exe unidata/Scripts.txt)
+ (action
+  (with-stdout-to
+   %{target}
+   (run tools/gen_unidata.exe --gen-script-type unidata/Scripts.txt))))
+
+(rule
+ (target version_type.ml)
+ (deps tools/gen_unidata.exe unidata/DerivedAge.txt)
+ (action
+  (with-stdout-to
+   %{target}
+   (run tools/gen_unidata.exe --gen-version-type unidata/DerivedAge.txt))))
+
 ; -b 0 emits one string literal per file instead of 4096-byte chunks: read
 ; returns the literal itself and the data stays demand-paged from the
 ; executable, rather than being faulted in wholesale by the GC's root scan.

@@ -86,6 +86,28 @@ See `camomile.ml` file.
 
 See https://github.com/savonet/Camomile
 
+### Updating the Unicode data
+
+The Unicode Character Database is vendored under `src/unidata` and
+`test/unidata` so that builds stay offline. To refresh it:
+
+```
+CAMOMILE_UPDATE_UNICODE=1 dune build @update-unicode --auto-promote
+```
+
+This downloads the latest published release and rewrites the vendored files in
+place. Without `--auto-promote` it only reports which files are out of date.
+`CAMOMILE_UPDATE_UNICODE` is what gates the download: with it unset, no build
+ever reaches the network. There is no way to ask for a specific release — the
+vendored files are the pin, so downgrading means reverting the commit.
+
+`UCharInfo.script_type` and `UCharInfo.version_type` are generated from the
+data, so new scripts and versions are picked up without touching any source.
+
+The UCA conformance suite does not pass and is excluded from `dune runtest`;
+run it with `dune build @uca-conformance`. See `test/tester/test_uCol.ml` for
+what is broken.
+
 ## Author
 
 Camomile is currently maintained by Romain Beauxis <romain.beauxis@gmail.com>

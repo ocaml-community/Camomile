@@ -48,12 +48,12 @@ module IntMap = Map.Make (Int)
 let blank_pat = Str.regexp "[ \t]+"
 let delim_pat = Str.regexp "[ \t]*\\["
 let comment_pat = Str.regexp "\\(^#.*\\)\\|\\([ \t]*$\\)"
-let version_pat = Str.regexp "@version\\(.*\\)"
+let directive_pat = Str.regexp "@\\(version\\|implicitweights\\)\\(.*\\)"
 let entry_pat = Str.regexp "\\([^;]+\\);[ \t]*\\([^#]+\\)\\(#.*\\)?$"
 
 let elements_pat =
   Str.regexp
-    "\\([\\.\\*]\\)\\([0-9A-F]+\\)\\.\\([0-9A-F]+\\)\\.\\([0-9A-F]+\\)\\.\\([0-9A-F]+\\)]"
+    "\\([.*]\\)\\([0-9A-F]+\\)\\.\\([0-9A-F]+\\)\\.\\([0-9A-F]+\\)\\][ \t]*"
 
 let int_of_code code =
   try int_of_string ("0x" ^ code) with _ -> failwith ("int_of_code: " ^ code)
@@ -134,7 +134,7 @@ let weight1_tbl, weight2_tbl, weight3_lowercasefirst_tbl =
     while true do
       let line = input_line ic in
       if Str.string_match comment_pat line 0 then ()
-      else if Str.string_match version_pat line 0 then ()
+      else if Str.string_match directive_pat line 0 then ()
       else if Str.string_match entry_pat line 0 then (
         let s1 = Str.matched_group 1 line in
         let s2 = Str.matched_group 2 line in

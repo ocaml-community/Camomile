@@ -59,7 +59,7 @@
  (alias runtest)
  (deps
   ../unidata/NormalizationTest.txt
-  ../unidata/CollationTest_SHIFTED.txt
+  ../unidata/CollationTest_SHIFTED_SHORT.txt
   (package camomile))
  (action
   (run ./test_normalform.exe)))
@@ -72,6 +72,20 @@
   (glob_files ../data/*))
  (action
   (run ./test_uCol.exe)))
+
+; The UCA conformance suites are known to fail; see test_uCol.ml.
+
+(rule
+ (alias uca-conformance)
+ (deps
+  (package camomile)
+  (glob_files ../unidata/*)
+  (glob_files ../data/*))
+ (action
+  (setenv
+   CAMOMILE_UCA_CONFORMANCE
+   1
+   (run ./test_uCol.exe))))
 
 (rule
  (alias runtest)

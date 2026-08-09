@@ -1,0 +1,76 @@
+; Refresh the vendored Unicode data:
+;   CAMOMILE_UPDATE_UNICODE=1 dune build @update-unicode --auto-promote
+;
+; Without the variable each file is merely copied, so a plain `dune build` --
+; which builds every target in the tree -- never reaches the network.
+
+(rule
+ (targets
+  CollationTest_NON_IGNORABLE_SHORT.txt.new
+  CollationTest_SHIFTED_SHORT.txt.new
+  NormalizationTest.txt.new)
+ (enabled_if
+  (= %{env:CAMOMILE_UPDATE_UNICODE=} ""))
+ (action
+  (progn
+   (copy
+    CollationTest_NON_IGNORABLE_SHORT.txt
+    CollationTest_NON_IGNORABLE_SHORT.txt.new)
+   (copy CollationTest_SHIFTED_SHORT.txt CollationTest_SHIFTED_SHORT.txt.new)
+   (copy NormalizationTest.txt NormalizationTest.txt.new))))
+
+(rule
+ (targets
+  CollationTest_NON_IGNORABLE_SHORT.txt.new
+  CollationTest_SHIFTED_SHORT.txt.new
+  NormalizationTest.txt.new)
+ (enabled_if
+  (<> %{env:CAMOMILE_UPDATE_UNICODE=} ""))
+ (action
+  (progn
+   (run
+    curl
+    -sSfL
+    https://www.unicode.org/Public/UCA/latest/CollationTest.zip
+    -o
+    CollationTest.zip
+    https://www.unicode.org/Public/UCD/latest/ucd/NormalizationTest.txt
+    -o
+    NormalizationTest.txt.new)
+   (with-stdout-to
+    CollationTest_NON_IGNORABLE_SHORT.txt.new
+    (run
+     unzip
+     -p
+     CollationTest.zip
+     CollationTest/CollationTest_NON_IGNORABLE_SHORT.txt))
+   (with-stdout-to
+    CollationTest_SHIFTED_SHORT.txt.new
+    (run
+     unzip
+     -p
+     CollationTest.zip
+     CollationTest/CollationTest_SHIFTED_SHORT.txt)))))
+
+(rule
+ (alias update-unicode)
+ (enabled_if
+  (<> %{env:CAMOMILE_UPDATE_UNICODE=} ""))
+ (action
+  (cmp
+   CollationTest_NON_IGNORABLE_SHORT.txt
+   CollationTest_NON_IGNORABLE_SHORT.txt.new)))
+
+(rule
+ (alias update-unicode)
+ (enabled_if
+  (<> %{env:CAMOMILE_UPDATE_UNICODE=} ""))
+ (action
+  (cmp CollationTest_SHIFTED_SHORT.txt CollationTest_SHIFTED_SHORT.txt.new)))
+
+(rule
+ (alias update-unicode)
+ (enabled_if
+  (<> %{env:CAMOMILE_UPDATE_UNICODE=} ""))
+ (action
+  (cmp NormalizationTest.txt NormalizationTest.txt.new)))

@@ -1,6 +1,14 @@
 2.1.0 (unreleased)
 ------------------
 
+- Update the Unicode Character Database from 3.2 to 17.0.0, and add a
+  `update-unicode` dune alias to refresh it (#3).
+- Generate `UCharInfo.script_type` and `UCharInfo.version_type` from the
+  Unicode data instead of hardcoding them. Scripts added since Unicode 3.2 are
+  now recognized, `` `v1_0 `` is gone (the UCD tracks ages from 1.1 onwards)
+  and the version tags run up to `` `v17_0 ``.
+- Fix canonical composition wrongly composing across a blocking character:
+  `NFC("େ̴ା")` no longer yields `ୋ̴` (UAX #15 D115).
 - Fix charmap generation with dune 3.24, which expands `%{deps}` to a path
   with a directory component (#13).
 - Add embedded APIs to be able to build binaries with the shared data built-in

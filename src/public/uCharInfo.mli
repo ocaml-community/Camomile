@@ -158,66 +158,13 @@ module type Type = sig
   val load_property_set_by_name : string -> USet.t
 
   (** Type for script type *)
-  type script_type =
-    [ `Common
-    | `Inherited
-    | `Latin
-    | `Greek
-    | `Cyrillic
-    | `Armenian
-    | `Hebrew
-    | `Arabic
-    | `Syriac
-    | `Thaana
-    | `Devanagari
-    | `Bengali
-    | `Gurmukhi
-    | `Gujarati
-    | `Oriya
-    | `Tamil
-    | `Telugu
-    | `Kannada
-    | `Malayalam
-    | `Sinhala
-    | `Thai
-    | `Lao
-    | `Tibetan
-    | `Myanmar
-    | `Georgian
-    | `Hangul
-    | `Ethiopic
-    | `Cherokee
-    | `Canadian_Aboriginal
-    | `Ogham
-    | `Runic
-    | `Khmer
-    | `Mongolian
-    | `Hiragana
-    | `Katakana
-    | `Bopomofo
-    | `Han
-    | `Yi
-    | `Old_Italic
-    | `Gothic
-    | `Deseret
-    | `Tagalog
-    | `Hanunoo
-    | `Buhid
-    | `Tagbanwa ]
+  type script_type = Script_type.t
 
   val script : UChar.t -> script_type
   val load_script_map : unit -> script_type UMap.t
 
   (** age *)
-  type version_type =
-    [ `Nc  (** undefined code point *)
-    | `v1_0
-    | `v1_1
-    | `v2_0
-    | `v2_1
-    | `v3_0
-    | `v3_1
-    | `v3_2 ]
+  type version_type = Version_type.t
 
   (** [age c] unicode version in wich [c] was introduced *)
   val age : UChar.t -> version_type
