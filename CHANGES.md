@@ -1,4 +1,4 @@
-2.1.0 (unreleased)
+2.1.0 (2026-08-12)
 ------------------
 
 - Update the Unicode Character Database from 3.2 to 17.0.0, and add a
