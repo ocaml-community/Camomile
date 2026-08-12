@@ -14,7 +14,7 @@ homepage: "https://github.com/savonet/Camomile"
 doc: "https://savonet.github.io/Camomile/"
 bug-reports: "https://github.com/savonet/Camomile/issues"
 depends: [
-  "dune" {>= "3.4"}
+  "dune" {>= "3.23"}
   "dune-site"
   "camlp-streams"
   "stdlib-random" {with-test}
@@ -38,3 +38,4 @@ build: [
   ["dune" "install" "-p" name "--create-install-files" name]
 ]
 dev-repo: "git+https://github.com/savonet/Camomile.git"
+x-maintenance-intent: ["(latest)"]

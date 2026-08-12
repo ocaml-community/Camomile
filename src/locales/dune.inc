@@ -286,1687 +286,1683 @@ zh_TW_STROKE.mar
 zh__PINYIN.mar
  ))
 
-(alias
- (name database)
- (deps (glob_files ../database/*.mar)))
-
 
 (rule
  (targets af.mar)
- (deps    (:x af.txt) (alias database))
+ (deps    (:x af.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets af_ZA.mar)
- (deps    (:x af_ZA.txt) (alias database))
+ (deps    (:x af_ZA.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets am.mar)
- (deps    (:x am.txt) (alias database))
+ (deps    (:x am.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets am_ET.mar)
- (deps    (:x am_ET.txt) (alias database))
+ (deps    (:x am_ET.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ar.mar)
- (deps    (:x ar.txt) (alias database))
+ (deps    (:x ar.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ar_AE.mar)
- (deps    (:x ar_AE.txt) (alias database))
+ (deps    (:x ar_AE.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ar_BH.mar)
- (deps    (:x ar_BH.txt) (alias database))
+ (deps    (:x ar_BH.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ar_DZ.mar)
- (deps    (:x ar_DZ.txt) (alias database))
+ (deps    (:x ar_DZ.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ar_EG.mar)
- (deps    (:x ar_EG.txt) (alias database))
+ (deps    (:x ar_EG.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ar_IN.mar)
- (deps    (:x ar_IN.txt) (alias database))
+ (deps    (:x ar_IN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ar_IQ.mar)
- (deps    (:x ar_IQ.txt) (alias database))
+ (deps    (:x ar_IQ.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ar_JO.mar)
- (deps    (:x ar_JO.txt) (alias database))
+ (deps    (:x ar_JO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ar_KW.mar)
- (deps    (:x ar_KW.txt) (alias database))
+ (deps    (:x ar_KW.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ar_LB.mar)
- (deps    (:x ar_LB.txt) (alias database))
+ (deps    (:x ar_LB.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ar_LY.mar)
- (deps    (:x ar_LY.txt) (alias database))
+ (deps    (:x ar_LY.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ar_MA.mar)
- (deps    (:x ar_MA.txt) (alias database))
+ (deps    (:x ar_MA.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ar_OM.mar)
- (deps    (:x ar_OM.txt) (alias database))
+ (deps    (:x ar_OM.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ar_QA.mar)
- (deps    (:x ar_QA.txt) (alias database))
+ (deps    (:x ar_QA.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ar_SA.mar)
- (deps    (:x ar_SA.txt) (alias database))
+ (deps    (:x ar_SA.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ar_SD.mar)
- (deps    (:x ar_SD.txt) (alias database))
+ (deps    (:x ar_SD.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ar_SY.mar)
- (deps    (:x ar_SY.txt) (alias database))
+ (deps    (:x ar_SY.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ar_TN.mar)
- (deps    (:x ar_TN.txt) (alias database))
+ (deps    (:x ar_TN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ar_YE.mar)
- (deps    (:x ar_YE.txt) (alias database))
+ (deps    (:x ar_YE.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets az.mar)
- (deps    (:x az.txt) (alias database))
+ (deps    (:x az.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets az_AZ.mar)
- (deps    (:x az_AZ.txt) (alias database))
+ (deps    (:x az_AZ.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets be.mar)
- (deps    (:x be.txt) (alias database))
+ (deps    (:x be.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets be_BY.mar)
- (deps    (:x be_BY.txt) (alias database))
+ (deps    (:x be_BY.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets bg.mar)
- (deps    (:x bg.txt) (alias database))
+ (deps    (:x bg.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets bg_BG.mar)
- (deps    (:x bg_BG.txt) (alias database))
+ (deps    (:x bg_BG.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets bn.mar)
- (deps    (:x bn.txt) (alias database))
+ (deps    (:x bn.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets bn_IN.mar)
- (deps    (:x bn_IN.txt) (alias database))
+ (deps    (:x bn_IN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ca.mar)
- (deps    (:x ca.txt) (alias database))
+ (deps    (:x ca.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ca_ES.mar)
- (deps    (:x ca_ES.txt) (alias database))
+ (deps    (:x ca_ES.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ca_ES_PREEURO.mar)
- (deps    (:x ca_ES_PREEURO.txt) (alias database))
+ (deps    (:x ca_ES_PREEURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets cs.mar)
- (deps    (:x cs.txt) (alias database))
+ (deps    (:x cs.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets cs_CZ.mar)
- (deps    (:x cs_CZ.txt) (alias database))
+ (deps    (:x cs_CZ.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets da.mar)
- (deps    (:x da.txt) (alias database))
+ (deps    (:x da.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets da_DK.mar)
- (deps    (:x da_DK.txt) (alias database))
+ (deps    (:x da_DK.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets de.mar)
- (deps    (:x de.txt) (alias database))
+ (deps    (:x de.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets de_AT.mar)
- (deps    (:x de_AT.txt) (alias database))
+ (deps    (:x de_AT.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets de_AT_PREEURO.mar)
- (deps    (:x de_AT_PREEURO.txt) (alias database))
+ (deps    (:x de_AT_PREEURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets de_BE.mar)
- (deps    (:x de_BE.txt) (alias database))
+ (deps    (:x de_BE.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets de_CH.mar)
- (deps    (:x de_CH.txt) (alias database))
+ (deps    (:x de_CH.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets de_DE.mar)
- (deps    (:x de_DE.txt) (alias database))
+ (deps    (:x de_DE.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets de_DE_PREEURO.mar)
- (deps    (:x de_DE_PREEURO.txt) (alias database))
+ (deps    (:x de_DE_PREEURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets de_LI.mar)
- (deps    (:x de_LI.txt) (alias database))
+ (deps    (:x de_LI.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets de_LU.mar)
- (deps    (:x de_LU.txt) (alias database))
+ (deps    (:x de_LU.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets de_LU_PREEURO.mar)
- (deps    (:x de_LU_PREEURO.txt) (alias database))
+ (deps    (:x de_LU_PREEURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets de__PHONEBOOK.mar)
- (deps    (:x de__PHONEBOOK.txt) (alias database))
+ (deps    (:x de__PHONEBOOK.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets div.mar)
- (deps    (:x div.txt) (alias database))
+ (deps    (:x div.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets div_MV.mar)
- (deps    (:x div_MV.txt) (alias database))
+ (deps    (:x div_MV.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets el.mar)
- (deps    (:x el.txt) (alias database))
+ (deps    (:x el.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets el_GR.mar)
- (deps    (:x el_GR.txt) (alias database))
+ (deps    (:x el_GR.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets el_GR_PREEURO.mar)
- (deps    (:x el_GR_PREEURO.txt) (alias database))
+ (deps    (:x el_GR_PREEURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en.mar)
- (deps    (:x en.txt) (alias database))
+ (deps    (:x en.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_AS.mar)
- (deps    (:x en_AS.txt) (alias database))
+ (deps    (:x en_AS.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_AU.mar)
- (deps    (:x en_AU.txt) (alias database))
+ (deps    (:x en_AU.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_BE.mar)
- (deps    (:x en_BE.txt) (alias database))
+ (deps    (:x en_BE.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_BE_PREEURO.mar)
- (deps    (:x en_BE_PREEURO.txt) (alias database))
+ (deps    (:x en_BE_PREEURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_BW.mar)
- (deps    (:x en_BW.txt) (alias database))
+ (deps    (:x en_BW.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_BZ.mar)
- (deps    (:x en_BZ.txt) (alias database))
+ (deps    (:x en_BZ.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_CA.mar)
- (deps    (:x en_CA.txt) (alias database))
+ (deps    (:x en_CA.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_GB.mar)
- (deps    (:x en_GB.txt) (alias database))
+ (deps    (:x en_GB.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_GB_EURO.mar)
- (deps    (:x en_GB_EURO.txt) (alias database))
+ (deps    (:x en_GB_EURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_GU.mar)
- (deps    (:x en_GU.txt) (alias database))
+ (deps    (:x en_GU.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_HK.mar)
- (deps    (:x en_HK.txt) (alias database))
+ (deps    (:x en_HK.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_IE.mar)
- (deps    (:x en_IE.txt) (alias database))
+ (deps    (:x en_IE.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_IE_PREEURO.mar)
- (deps    (:x en_IE_PREEURO.txt) (alias database))
+ (deps    (:x en_IE_PREEURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_IN.mar)
- (deps    (:x en_IN.txt) (alias database))
+ (deps    (:x en_IN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_JM.mar)
- (deps    (:x en_JM.txt) (alias database))
+ (deps    (:x en_JM.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_MH.mar)
- (deps    (:x en_MH.txt) (alias database))
+ (deps    (:x en_MH.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_MP.mar)
- (deps    (:x en_MP.txt) (alias database))
+ (deps    (:x en_MP.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_MT.mar)
- (deps    (:x en_MT.txt) (alias database))
+ (deps    (:x en_MT.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_NZ.mar)
- (deps    (:x en_NZ.txt) (alias database))
+ (deps    (:x en_NZ.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_PH.mar)
- (deps    (:x en_PH.txt) (alias database))
+ (deps    (:x en_PH.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_SG.mar)
- (deps    (:x en_SG.txt) (alias database))
+ (deps    (:x en_SG.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_TT.mar)
- (deps    (:x en_TT.txt) (alias database))
+ (deps    (:x en_TT.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_UM.mar)
- (deps    (:x en_UM.txt) (alias database))
+ (deps    (:x en_UM.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_US.mar)
- (deps    (:x en_US.txt) (alias database))
+ (deps    (:x en_US.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_US_POSIX.mar)
- (deps    (:x en_US_POSIX.txt) (alias database))
+ (deps    (:x en_US_POSIX.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_VI.mar)
- (deps    (:x en_VI.txt) (alias database))
+ (deps    (:x en_VI.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_ZA.mar)
- (deps    (:x en_ZA.txt) (alias database))
+ (deps    (:x en_ZA.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets en_ZW.mar)
- (deps    (:x en_ZW.txt) (alias database))
+ (deps    (:x en_ZW.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets eo.mar)
- (deps    (:x eo.txt) (alias database))
+ (deps    (:x eo.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es.mar)
- (deps    (:x es.txt) (alias database))
+ (deps    (:x es.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_AR.mar)
- (deps    (:x es_AR.txt) (alias database))
+ (deps    (:x es_AR.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_BO.mar)
- (deps    (:x es_BO.txt) (alias database))
+ (deps    (:x es_BO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_CL.mar)
- (deps    (:x es_CL.txt) (alias database))
+ (deps    (:x es_CL.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_CO.mar)
- (deps    (:x es_CO.txt) (alias database))
+ (deps    (:x es_CO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_CR.mar)
- (deps    (:x es_CR.txt) (alias database))
+ (deps    (:x es_CR.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_DO.mar)
- (deps    (:x es_DO.txt) (alias database))
+ (deps    (:x es_DO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_EC.mar)
- (deps    (:x es_EC.txt) (alias database))
+ (deps    (:x es_EC.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_ES.mar)
- (deps    (:x es_ES.txt) (alias database))
+ (deps    (:x es_ES.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_ES_PREEURO.mar)
- (deps    (:x es_ES_PREEURO.txt) (alias database))
+ (deps    (:x es_ES_PREEURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_GT.mar)
- (deps    (:x es_GT.txt) (alias database))
+ (deps    (:x es_GT.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_HN.mar)
- (deps    (:x es_HN.txt) (alias database))
+ (deps    (:x es_HN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_MX.mar)
- (deps    (:x es_MX.txt) (alias database))
+ (deps    (:x es_MX.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_NI.mar)
- (deps    (:x es_NI.txt) (alias database))
+ (deps    (:x es_NI.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_PA.mar)
- (deps    (:x es_PA.txt) (alias database))
+ (deps    (:x es_PA.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_PE.mar)
- (deps    (:x es_PE.txt) (alias database))
+ (deps    (:x es_PE.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_PR.mar)
- (deps    (:x es_PR.txt) (alias database))
+ (deps    (:x es_PR.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_PY.mar)
- (deps    (:x es_PY.txt) (alias database))
+ (deps    (:x es_PY.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_SV.mar)
- (deps    (:x es_SV.txt) (alias database))
+ (deps    (:x es_SV.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_US.mar)
- (deps    (:x es_US.txt) (alias database))
+ (deps    (:x es_US.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_UY.mar)
- (deps    (:x es_UY.txt) (alias database))
+ (deps    (:x es_UY.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es_VE.mar)
- (deps    (:x es_VE.txt) (alias database))
+ (deps    (:x es_VE.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets es__TRADITIONAL.mar)
- (deps    (:x es__TRADITIONAL.txt) (alias database))
+ (deps    (:x es__TRADITIONAL.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets et.mar)
- (deps    (:x et.txt) (alias database))
+ (deps    (:x et.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets et_EE.mar)
- (deps    (:x et_EE.txt) (alias database))
+ (deps    (:x et_EE.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets eu.mar)
- (deps    (:x eu.txt) (alias database))
+ (deps    (:x eu.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets eu_ES.mar)
- (deps    (:x eu_ES.txt) (alias database))
+ (deps    (:x eu_ES.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets eu_ES_PREEURO.mar)
- (deps    (:x eu_ES_PREEURO.txt) (alias database))
+ (deps    (:x eu_ES_PREEURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets fa.mar)
- (deps    (:x fa.txt) (alias database))
+ (deps    (:x fa.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets fa_IN.mar)
- (deps    (:x fa_IN.txt) (alias database))
+ (deps    (:x fa_IN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets fa_IR.mar)
- (deps    (:x fa_IR.txt) (alias database))
+ (deps    (:x fa_IR.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets fi.mar)
- (deps    (:x fi.txt) (alias database))
+ (deps    (:x fi.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets fi_FI.mar)
- (deps    (:x fi_FI.txt) (alias database))
+ (deps    (:x fi_FI.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets fi_FI_PREEURO.mar)
- (deps    (:x fi_FI_PREEURO.txt) (alias database))
+ (deps    (:x fi_FI_PREEURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets fo.mar)
- (deps    (:x fo.txt) (alias database))
+ (deps    (:x fo.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets fo_FO.mar)
- (deps    (:x fo_FO.txt) (alias database))
+ (deps    (:x fo_FO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets fr.mar)
- (deps    (:x fr.txt) (alias database))
+ (deps    (:x fr.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets fr_BE.mar)
- (deps    (:x fr_BE.txt) (alias database))
+ (deps    (:x fr_BE.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets fr_BE_PREEURO.mar)
- (deps    (:x fr_BE_PREEURO.txt) (alias database))
+ (deps    (:x fr_BE_PREEURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets fr_CA.mar)
- (deps    (:x fr_CA.txt) (alias database))
+ (deps    (:x fr_CA.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets fr_CH.mar)
- (deps    (:x fr_CH.txt) (alias database))
+ (deps    (:x fr_CH.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets fr_FR.mar)
- (deps    (:x fr_FR.txt) (alias database))
+ (deps    (:x fr_FR.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets fr_FR_PREEURO.mar)
- (deps    (:x fr_FR_PREEURO.txt) (alias database))
+ (deps    (:x fr_FR_PREEURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets fr_LU.mar)
- (deps    (:x fr_LU.txt) (alias database))
+ (deps    (:x fr_LU.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets fr_LU_PREEURO.mar)
- (deps    (:x fr_LU_PREEURO.txt) (alias database))
+ (deps    (:x fr_LU_PREEURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets fr_MC.mar)
- (deps    (:x fr_MC.txt) (alias database))
+ (deps    (:x fr_MC.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ga.mar)
- (deps    (:x ga.txt) (alias database))
+ (deps    (:x ga.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ga_IE.mar)
- (deps    (:x ga_IE.txt) (alias database))
+ (deps    (:x ga_IE.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ga_IE_PREEURO.mar)
- (deps    (:x ga_IE_PREEURO.txt) (alias database))
+ (deps    (:x ga_IE_PREEURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets gl.mar)
- (deps    (:x gl.txt) (alias database))
+ (deps    (:x gl.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets gl_ES.mar)
- (deps    (:x gl_ES.txt) (alias database))
+ (deps    (:x gl_ES.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets gl_ES_PREEURO.mar)
- (deps    (:x gl_ES_PREEURO.txt) (alias database))
+ (deps    (:x gl_ES_PREEURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets gu.mar)
- (deps    (:x gu.txt) (alias database))
+ (deps    (:x gu.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets gu_IN.mar)
- (deps    (:x gu_IN.txt) (alias database))
+ (deps    (:x gu_IN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets gv.mar)
- (deps    (:x gv.txt) (alias database))
+ (deps    (:x gv.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets gv_GB.mar)
- (deps    (:x gv_GB.txt) (alias database))
+ (deps    (:x gv_GB.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets he.mar)
- (deps    (:x he.txt) (alias database))
+ (deps    (:x he.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets he_IL.mar)
- (deps    (:x he_IL.txt) (alias database))
+ (deps    (:x he_IL.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets hi.mar)
- (deps    (:x hi.txt) (alias database))
+ (deps    (:x hi.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets hi_IN.mar)
- (deps    (:x hi_IN.txt) (alias database))
+ (deps    (:x hi_IN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets hi__DIRECT.mar)
- (deps    (:x hi__DIRECT.txt) (alias database))
+ (deps    (:x hi__DIRECT.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets hr.mar)
- (deps    (:x hr.txt) (alias database))
+ (deps    (:x hr.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets hr_HR.mar)
- (deps    (:x hr_HR.txt) (alias database))
+ (deps    (:x hr_HR.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets hu.mar)
- (deps    (:x hu.txt) (alias database))
+ (deps    (:x hu.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets hu_HU.mar)
- (deps    (:x hu_HU.txt) (alias database))
+ (deps    (:x hu_HU.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets hy.mar)
- (deps    (:x hy.txt) (alias database))
+ (deps    (:x hy.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets hy_AM.mar)
- (deps    (:x hy_AM.txt) (alias database))
+ (deps    (:x hy_AM.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets hy_AM_REVISED.mar)
- (deps    (:x hy_AM_REVISED.txt) (alias database))
+ (deps    (:x hy_AM_REVISED.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets id.mar)
- (deps    (:x id.txt) (alias database))
+ (deps    (:x id.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets id_ID.mar)
- (deps    (:x id_ID.txt) (alias database))
+ (deps    (:x id_ID.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets index.mar)
- (deps    (:x index.txt) (alias database))
+ (deps    (:x index.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets is.mar)
- (deps    (:x is.txt) (alias database))
+ (deps    (:x is.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets is_IS.mar)
- (deps    (:x is_IS.txt) (alias database))
+ (deps    (:x is_IS.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets it.mar)
- (deps    (:x it.txt) (alias database))
+ (deps    (:x it.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets it_CH.mar)
- (deps    (:x it_CH.txt) (alias database))
+ (deps    (:x it_CH.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets it_IT.mar)
- (deps    (:x it_IT.txt) (alias database))
+ (deps    (:x it_IT.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets it_IT_PREEURO.mar)
- (deps    (:x it_IT_PREEURO.txt) (alias database))
+ (deps    (:x it_IT_PREEURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets iw.mar)
- (deps    (:x iw.txt) (alias database))
+ (deps    (:x iw.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets iw_IL.mar)
- (deps    (:x iw_IL.txt) (alias database))
+ (deps    (:x iw_IL.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ja.mar)
- (deps    (:x ja.txt) (alias database))
+ (deps    (:x ja.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ja_JP.mar)
- (deps    (:x ja_JP.txt) (alias database))
+ (deps    (:x ja_JP.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ka.mar)
- (deps    (:x ka.txt) (alias database))
+ (deps    (:x ka.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ka_GE.mar)
- (deps    (:x ka_GE.txt) (alias database))
+ (deps    (:x ka_GE.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets kk.mar)
- (deps    (:x kk.txt) (alias database))
+ (deps    (:x kk.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets kk_KZ.mar)
- (deps    (:x kk_KZ.txt) (alias database))
+ (deps    (:x kk_KZ.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets kl.mar)
- (deps    (:x kl.txt) (alias database))
+ (deps    (:x kl.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets kl_GL.mar)
- (deps    (:x kl_GL.txt) (alias database))
+ (deps    (:x kl_GL.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets kn.mar)
- (deps    (:x kn.txt) (alias database))
+ (deps    (:x kn.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets kn_IN.mar)
- (deps    (:x kn_IN.txt) (alias database))
+ (deps    (:x kn_IN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ko.mar)
- (deps    (:x ko.txt) (alias database))
+ (deps    (:x ko.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ko_KR.mar)
- (deps    (:x ko_KR.txt) (alias database))
+ (deps    (:x ko_KR.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets kok.mar)
- (deps    (:x kok.txt) (alias database))
+ (deps    (:x kok.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets kok_IN.mar)
- (deps    (:x kok_IN.txt) (alias database))
+ (deps    (:x kok_IN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets kw.mar)
- (deps    (:x kw.txt) (alias database))
+ (deps    (:x kw.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets kw_GB.mar)
- (deps    (:x kw_GB.txt) (alias database))
+ (deps    (:x kw_GB.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ky.mar)
- (deps    (:x ky.txt) (alias database))
+ (deps    (:x ky.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ky_KG.mar)
- (deps    (:x ky_KG.txt) (alias database))
+ (deps    (:x ky_KG.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets lt.mar)
- (deps    (:x lt.txt) (alias database))
+ (deps    (:x lt.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets lt_LT.mar)
- (deps    (:x lt_LT.txt) (alias database))
+ (deps    (:x lt_LT.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets lv.mar)
- (deps    (:x lv.txt) (alias database))
+ (deps    (:x lv.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets lv_LV.mar)
- (deps    (:x lv_LV.txt) (alias database))
+ (deps    (:x lv_LV.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets mk.mar)
- (deps    (:x mk.txt) (alias database))
+ (deps    (:x mk.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets mk_MK.mar)
- (deps    (:x mk_MK.txt) (alias database))
+ (deps    (:x mk_MK.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets mn.mar)
- (deps    (:x mn.txt) (alias database))
+ (deps    (:x mn.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets mn_MN.mar)
- (deps    (:x mn_MN.txt) (alias database))
+ (deps    (:x mn_MN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets mr.mar)
- (deps    (:x mr.txt) (alias database))
+ (deps    (:x mr.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets mr_IN.mar)
- (deps    (:x mr_IN.txt) (alias database))
+ (deps    (:x mr_IN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ms.mar)
- (deps    (:x ms.txt) (alias database))
+ (deps    (:x ms.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ms_BN.mar)
- (deps    (:x ms_BN.txt) (alias database))
+ (deps    (:x ms_BN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ms_MY.mar)
- (deps    (:x ms_MY.txt) (alias database))
+ (deps    (:x ms_MY.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets mt.mar)
- (deps    (:x mt.txt) (alias database))
+ (deps    (:x mt.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets mt_MT.mar)
- (deps    (:x mt_MT.txt) (alias database))
+ (deps    (:x mt_MT.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets nb.mar)
- (deps    (:x nb.txt) (alias database))
+ (deps    (:x nb.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets nb_NO.mar)
- (deps    (:x nb_NO.txt) (alias database))
+ (deps    (:x nb_NO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets nl.mar)
- (deps    (:x nl.txt) (alias database))
+ (deps    (:x nl.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets nl_BE.mar)
- (deps    (:x nl_BE.txt) (alias database))
+ (deps    (:x nl_BE.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets nl_BE_PREEURO.mar)
- (deps    (:x nl_BE_PREEURO.txt) (alias database))
+ (deps    (:x nl_BE_PREEURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets nl_NL.mar)
- (deps    (:x nl_NL.txt) (alias database))
+ (deps    (:x nl_NL.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets nl_NL_PREEURO.mar)
- (deps    (:x nl_NL_PREEURO.txt) (alias database))
+ (deps    (:x nl_NL_PREEURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets nn.mar)
- (deps    (:x nn.txt) (alias database))
+ (deps    (:x nn.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets nn_NO.mar)
- (deps    (:x nn_NO.txt) (alias database))
+ (deps    (:x nn_NO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets no.mar)
- (deps    (:x no.txt) (alias database))
+ (deps    (:x no.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets no_NO.mar)
- (deps    (:x no_NO.txt) (alias database))
+ (deps    (:x no_NO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets no_NO_NY.mar)
- (deps    (:x no_NO_NY.txt) (alias database))
+ (deps    (:x no_NO_NY.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets om.mar)
- (deps    (:x om.txt) (alias database))
+ (deps    (:x om.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets om_ET.mar)
- (deps    (:x om_ET.txt) (alias database))
+ (deps    (:x om_ET.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets om_KE.mar)
- (deps    (:x om_KE.txt) (alias database))
+ (deps    (:x om_KE.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets pa.mar)
- (deps    (:x pa.txt) (alias database))
+ (deps    (:x pa.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets pa_IN.mar)
- (deps    (:x pa_IN.txt) (alias database))
+ (deps    (:x pa_IN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets pl.mar)
- (deps    (:x pl.txt) (alias database))
+ (deps    (:x pl.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets pl_PL.mar)
- (deps    (:x pl_PL.txt) (alias database))
+ (deps    (:x pl_PL.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets pt.mar)
- (deps    (:x pt.txt) (alias database))
+ (deps    (:x pt.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets pt_BR.mar)
- (deps    (:x pt_BR.txt) (alias database))
+ (deps    (:x pt_BR.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets pt_PT.mar)
- (deps    (:x pt_PT.txt) (alias database))
+ (deps    (:x pt_PT.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets pt_PT_PREEURO.mar)
- (deps    (:x pt_PT_PREEURO.txt) (alias database))
+ (deps    (:x pt_PT_PREEURO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ro.mar)
- (deps    (:x ro.txt) (alias database))
+ (deps    (:x ro.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ro_RO.mar)
- (deps    (:x ro_RO.txt) (alias database))
+ (deps    (:x ro_RO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets root.mar)
- (deps    (:x root.txt) (alias database))
+ (deps    (:x root.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ru.mar)
- (deps    (:x ru.txt) (alias database))
+ (deps    (:x ru.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ru_RU.mar)
- (deps    (:x ru_RU.txt) (alias database))
+ (deps    (:x ru_RU.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ru_UA.mar)
- (deps    (:x ru_UA.txt) (alias database))
+ (deps    (:x ru_UA.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets sa.mar)
- (deps    (:x sa.txt) (alias database))
+ (deps    (:x sa.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets sa_IN.mar)
- (deps    (:x sa_IN.txt) (alias database))
+ (deps    (:x sa_IN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets sh.mar)
- (deps    (:x sh.txt) (alias database))
+ (deps    (:x sh.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets sh_YU.mar)
- (deps    (:x sh_YU.txt) (alias database))
+ (deps    (:x sh_YU.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets sk.mar)
- (deps    (:x sk.txt) (alias database))
+ (deps    (:x sk.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets sk_SK.mar)
- (deps    (:x sk_SK.txt) (alias database))
+ (deps    (:x sk_SK.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets sl.mar)
- (deps    (:x sl.txt) (alias database))
+ (deps    (:x sl.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets sl_SI.mar)
- (deps    (:x sl_SI.txt) (alias database))
+ (deps    (:x sl_SI.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets so.mar)
- (deps    (:x so.txt) (alias database))
+ (deps    (:x so.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets so_DJ.mar)
- (deps    (:x so_DJ.txt) (alias database))
+ (deps    (:x so_DJ.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets so_ET.mar)
- (deps    (:x so_ET.txt) (alias database))
+ (deps    (:x so_ET.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets so_KE.mar)
- (deps    (:x so_KE.txt) (alias database))
+ (deps    (:x so_KE.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets so_SO.mar)
- (deps    (:x so_SO.txt) (alias database))
+ (deps    (:x so_SO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets sq.mar)
- (deps    (:x sq.txt) (alias database))
+ (deps    (:x sq.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets sq_AL.mar)
- (deps    (:x sq_AL.txt) (alias database))
+ (deps    (:x sq_AL.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets sr.mar)
- (deps    (:x sr.txt) (alias database))
+ (deps    (:x sr.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets sr_YU.mar)
- (deps    (:x sr_YU.txt) (alias database))
+ (deps    (:x sr_YU.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets sv.mar)
- (deps    (:x sv.txt) (alias database))
+ (deps    (:x sv.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets sv_FI.mar)
- (deps    (:x sv_FI.txt) (alias database))
+ (deps    (:x sv_FI.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets sv_SE.mar)
- (deps    (:x sv_SE.txt) (alias database))
+ (deps    (:x sv_SE.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets sw.mar)
- (deps    (:x sw.txt) (alias database))
+ (deps    (:x sw.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets sw_KE.mar)
- (deps    (:x sw_KE.txt) (alias database))
+ (deps    (:x sw_KE.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets sw_TZ.mar)
- (deps    (:x sw_TZ.txt) (alias database))
+ (deps    (:x sw_TZ.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets syr.mar)
- (deps    (:x syr.txt) (alias database))
+ (deps    (:x syr.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets syr_SY.mar)
- (deps    (:x syr_SY.txt) (alias database))
+ (deps    (:x syr_SY.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ta.mar)
- (deps    (:x ta.txt) (alias database))
+ (deps    (:x ta.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ta_IN.mar)
- (deps    (:x ta_IN.txt) (alias database))
+ (deps    (:x ta_IN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets te.mar)
- (deps    (:x te.txt) (alias database))
+ (deps    (:x te.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets te_IN.mar)
- (deps    (:x te_IN.txt) (alias database))
+ (deps    (:x te_IN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets test_1.mar)
- (deps    (:x test_1.txt) (alias database))
+ (deps    (:x test_1.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets th.mar)
- (deps    (:x th.txt) (alias database))
+ (deps    (:x th.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets th_TH.mar)
- (deps    (:x th_TH.txt) (alias database))
+ (deps    (:x th_TH.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ti.mar)
- (deps    (:x ti.txt) (alias database))
+ (deps    (:x ti.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ti_ER.mar)
- (deps    (:x ti_ER.txt) (alias database))
+ (deps    (:x ti_ER.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ti_ET.mar)
- (deps    (:x ti_ET.txt) (alias database))
+ (deps    (:x ti_ET.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets tr.mar)
- (deps    (:x tr.txt) (alias database))
+ (deps    (:x tr.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets tr_TR.mar)
- (deps    (:x tr_TR.txt) (alias database))
+ (deps    (:x tr_TR.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets tt.mar)
- (deps    (:x tt.txt) (alias database))
+ (deps    (:x tt.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets tt_RU.mar)
- (deps    (:x tt_RU.txt) (alias database))
+ (deps    (:x tt_RU.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets uk.mar)
- (deps    (:x uk.txt) (alias database))
+ (deps    (:x uk.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets uk_UA.mar)
- (deps    (:x uk_UA.txt) (alias database))
+ (deps    (:x uk_UA.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ur.mar)
- (deps    (:x ur.txt) (alias database))
+ (deps    (:x ur.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets ur_PK.mar)
- (deps    (:x ur_PK.txt) (alias database))
+ (deps    (:x ur_PK.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets uz.mar)
- (deps    (:x uz.txt) (alias database))
+ (deps    (:x uz.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets uz_UZ.mar)
- (deps    (:x uz_UZ.txt) (alias database))
+ (deps    (:x uz_UZ.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets vi.mar)
- (deps    (:x vi.txt) (alias database))
+ (deps    (:x vi.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets vi_VN.mar)
- (deps    (:x vi_VN.txt) (alias database))
+ (deps    (:x vi_VN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets zh.mar)
- (deps    (:x zh.txt) (alias database))
+ (deps    (:x zh.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets zh_CN.mar)
- (deps    (:x zh_CN.txt) (alias database))
+ (deps    (:x zh_CN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets zh_HK.mar)
- (deps    (:x zh_HK.txt) (alias database))
+ (deps    (:x zh_HK.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets zh_MO.mar)
- (deps    (:x zh_MO.txt) (alias database))
+ (deps    (:x zh_MO.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets zh_SG.mar)
- (deps    (:x zh_SG.txt) (alias database))
+ (deps    (:x zh_SG.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets zh_TW.mar)
- (deps    (:x zh_TW.txt) (alias database))
+ (deps    (:x zh_TW.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets zh_TW_STROKE.mar)
- (deps    (:x zh_TW_STROKE.txt) (alias database))
+ (deps    (:x zh_TW_STROKE.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 
 
 (rule
  (targets zh__PINYIN.mar)
- (deps    (:x zh__PINYIN.txt) (alias database))
+ (deps    (:x zh__PINYIN.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %{x} .)))
 

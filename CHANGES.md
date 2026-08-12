@@ -11,6 +11,7 @@
   `NFC("େ̴ା")` no longer yields `ୋ̴` (UAX #15 D115).
 - Fix charmap generation with dune 3.24, which expands `%{deps}` to a path
   with a directory component (#13).
+- Switch to dune `3.23` as minimal version.
 - Add embedded APIs to be able to build binaries with the shared data built-in
   (#12)
 

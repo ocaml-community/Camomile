@@ -28,10 +28,10 @@
   iso88597.mar
   jisx0212.mar)
  (deps
-  ../charmaps/sources/GB2312
-  ../charmaps/sources/EUC-JP
-  ../charmaps/sources/EUC-KR
-  ../charmaps/sources/EUC-TW
-  ../charmaps/sources/ISO-8859-7)
+  ../charmaps/GB2312
+  ../charmaps/EUC-JP
+  ../charmaps/EUC-KR
+  ../charmaps/EUC-TW
+  ../charmaps/ISO-8859-7)
  (action
   (run ./gen_mappings.exe)))

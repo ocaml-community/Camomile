@@ -1,8 +1,9 @@
-(lang dune 3.4)
+(lang dune 3.23)
 (using dune_site 0.1)
 
 (name camomile)
 (version 2.1.0)
+(maintenance_intent "(latest)")
 
 (generate_opam_files true)
 (license "LGPL-2.0-or-later WITH OCaml-LGPL-linking-exception")

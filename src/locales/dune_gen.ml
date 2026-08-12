@@ -11,7 +11,7 @@ let rule locale =
     {|
 (rule
  (targets %s.mar)
- (deps    (:x %s.txt) (alias database))
+ (deps    (:x %s.txt) (glob_files ../database/*.mar))
  (action  (run ../tools/camomilelocaledef.exe --file %%{x} .)))
 |}
     locale locale
@@ -26,10 +26,6 @@ let () =
  (files
    %s
  ))
-
-(alias
- (name database)
- (deps (glob_files ../database/*.mar)))
 
 %s
 |}
