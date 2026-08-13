@@ -39,5 +39,6 @@ camomile-embedded.charencoding sublibrary exposes charset conversion alone
 and embeds only the charmap data it needs.")
  (depends
   (camomile (= :version))
-  (crunch :build)
+  (crunch (and :build (>= 4.1.0)))
+  (stdlib-random :with-test)
   (ocaml (>= 4.13))))

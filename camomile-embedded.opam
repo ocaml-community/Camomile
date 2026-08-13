@@ -17,7 +17,8 @@ bug-reports: "https://github.com/savonet/Camomile/issues"
 depends: [
   "dune" {>= "3.23"}
   "camomile" {= version}
-  "crunch" {build}
+  "crunch" {build & >= "4.1.0"}
+  "stdlib-random" {with-test}
   "ocaml" {>= "4.13"}
   "odoc" {with-doc}
 ]
